@@ -6,15 +6,15 @@ let selectedCountry = null;
 // ------Load Countries
 function loadCountries() {
     let countriesList = document.getElementById("countriesList");
-    countriesArrayList = []; // clear previous data
-    index = 0; // reset index
+    countriesArrayList = []; //----clear previous data
+    index = 0; //----reset index
   
     fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
       .then((dataList) => {
         let body = "";
         dataList.forEach((element) => {
-          countriesArrayList.push(element); // store it
+          countriesArrayList.push(element); //---store
           body += `<div class="col" id="${index}">
               <div class="card shadow-sm">
                 <img src="${element.flags.png}" alt="Flag">
@@ -56,7 +56,7 @@ function search() {
   .then((res) => res.json())
   .then((dataList) => {
     let body = "";
-    countriesArrayList = []; // reset
+    countriesArrayList = []; //----reset
     index = 0;
 
     dataList.forEach((country) => {
@@ -94,13 +94,13 @@ function search() {
 
 //----Show Country Modal
 function showCountryModal(countryIndex) {
-    const country = countriesArrayList[countryIndex]; // retrieve it
+    const country = countriesArrayList[countryIndex]; //---retrieve
     const modalTitle = document.getElementById("exampleModalLabel");
     const modalBody = document.getElementById("modal-body");
   
     modalTitle.textContent = country.name.common;
   
-    // Rest of your modal code (same as before)
+    // -----Rest modal code
     const name = country.name.common || "N/A";
     const officialName = country.name.official || "N/A";
     const flag = country.flags.png || "";
@@ -161,5 +161,5 @@ document.getElementById("refreshBtn").addEventListener("click", () => {
   loadCountries();
 });
 
-// Load all countries by default
+//----Load all countries by default
 loadCountries();
