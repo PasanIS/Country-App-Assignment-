@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    background-color: #18230F;
+    color: white;
+}
+
+.input-group {
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    flex-wrap: wrap;
+}
+
+.input-group input {
+    background-color: #18230F;
+}
+
+.input-group ::placeholder {
+    color: white;
+}
+
+#txtSearch {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+#button-addon2,
+#mapViewBtn,
+#refreshBtn {
+    margin-left: 10px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 6px 30px;
+    margin-right: 10px;
+}
+
+#button-addon2{
+    margin-top: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 20px;
+    height: 200px;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.card {
+    flex: 1 1 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+#countriesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.search-wrapper {
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    #txtSearch,
+    #button-addon2,
+    #mapViewBtn,
+    #refreshBtn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .input-group {
+        padding: 0 10px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card img {
+        height: auto;
+    }
+}
